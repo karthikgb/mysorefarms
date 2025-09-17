@@ -45,7 +45,7 @@ import { CommonModule } from '@angular/common';
           </div>
           
           <div class="about-image">
-            <img src="https://images.pexels.com/photos/2382894/pexels-photo-2382894.jpeg?auto=compress&cs=tinysrgb&w=800" 
+            <img src="assets/ricepic.jpg" 
                  alt="South Indian farmers in rice fields" class="main-image">
             <div class="stats-overlay">
               <div class="stat-item">

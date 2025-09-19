@@ -191,7 +191,7 @@ export class ProductsComponent {
       name: 'Premium Basmati Rice',
       description: 'Aged for 2 years, this aromatic long-grain rice delivers exceptional flavor and texture.',
       image: 'https://images.pexels.com/photos/4110256/pexels-photo-4110256.jpeg?auto=compress&cs=tinysrgb&w=600',
-      price: '$24.99',
+      price: '$22.99',
       badge: 'Best Seller',
       features: ['Organic', 'Aged 2 Years', 'Long Grain', 'Aromatic']
     },

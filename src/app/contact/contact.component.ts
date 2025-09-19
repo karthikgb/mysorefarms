@@ -26,6 +26,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
           <form class="contact-form"
                 name="contact"
+                method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 #f="ngForm"
@@ -35,7 +36,7 @@ import { FormsModule, NgForm } from '@angular/forms';
             <!-- Honeypot -->
             <input type="text" name="bot-field" [(ngModel)]="honeypot" class="hp" tabindex="-1" aria-hidden="true">
 
-            <!-- Hidden form name -->
+            <!-- Hidden form name (must match Netlify registration form) -->
             <input type="hidden" name="form-name" [value]="formName">
 
             <div class="form-group">
@@ -113,9 +114,16 @@ export class ContactComponent {
     try {
       const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        },
         body
       });
+
+      // Helpful to see Netlify’s response during first test
+      const debugText = await res.text();
+      console.debug('Netlify Forms response:', res.status, debugText);
 
       if (res.ok) {
         this.status = 'ok';

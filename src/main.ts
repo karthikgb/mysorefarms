@@ -6,6 +6,7 @@ import { ProductsComponent } from './app/products/products.component';
 import { AboutComponent } from './app/about/about.component';
 import { ContactComponent } from './app/contact/contact.component';
 import { FooterComponent } from './app/footer/footer.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -48,4 +49,8 @@ export class App implements OnInit {
   }
 }
 
-bootstrapApplication(App);
+bootstrapApplication(App,{
+  providers: [
+    provideHttpClient(withFetch())   // <-- enables HttpClient for your ContactComponent
+  ]
+});

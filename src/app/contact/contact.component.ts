@@ -28,7 +28,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
             <div class="info-card">
               <div class="info-icon">📞</div>
               <h3>Phone</h3>
-              <p>+1 (416) 555-0123</p>
+              <p>+1 (437) 988-3875</p>
             </div>
             
             <div class="info-card">
